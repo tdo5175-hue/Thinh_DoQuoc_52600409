@@ -2234,20 +2234,26 @@ img {
   position: relative;
   margin-bottom: 14px;
 }
-
+/* Giữ nguyên class gốc của bạn, chỉ cần xóa thuộc tính "color" và "font-size" nếu không cần thiết nữa */
 .dev-avatar-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-  color: #ffffff;
+  /* background & color có thể giữ lại làm fallback khi ảnh chưa tải xong */
+  background: linear-gradient(135deg, #0f172a 0%, #334155 100%); 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-brand);
-  font-weight: 900;
-  font-size: 22px;
   border: 3px solid var(--brand-red);
+  overflow: hidden; /* QUAN TRỌNG: để ảnh không bị tràn ra ngoài vòng tròn */
+}
+
+/* THÊM MỚI CLASS NÀY: Để tối ưu hiển thị cho ảnh thẻ */
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Giúp ảnh tự co giãn vừa khít mà không bị méo */
+  object-position: center top; /* Đẩy góc nhìn lên phía trên một chút để thấy rõ mặt và tóc */
 }
 
 .online-indicator {

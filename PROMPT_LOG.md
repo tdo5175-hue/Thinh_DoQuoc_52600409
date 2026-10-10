@@ -160,6 +160,25 @@ AI đã bổ sung toàn bộ 12 mẫu xe vào grid sản phẩm, phân loại th
 -Nhận xét & Tinh chỉnh của SV:
 Giao diện trở nên vô cùng phong phú, chuyên nghiệp đúng chất website của giới sưu tầm mô hình die-cast quốc tế, các hiệu ứng thị giác mượt mà và trực quan, đạt điểm tối đa cho môn Thiết Kế Web.
 
+-Lần 9: Khắc phục lỗi giao diện chuyển slide, căn chỉnh chuẩn 100% tọa độ Hotspot xe và nâng cấp chuỗi hiệu ứng Pure CSS cao cấp
+Prompt đã dùng:
+"nó bị lỗi giao diện hiện thị phần chuyển mục ảnh menu nè bạn fix lại đi và chỉnh tiếp hiệu ứng. Ở ảnh có các tích cộng + này hiện thị xe thì nó không căn chỉnh khớp bạn chỉnh lại thêm nhé. Và fix lại toàn bộ giao diện lại xem còn lỗi nữa không hãy chỉnh lại một cách logic nhất nhé, và thêm nhiều hiệu ứng thêm chút mà không được xài javascript nhé"
+-Kết quả AI tạo ra:
+1. Sửa triệt để lỗi khoảng trắng Carousel: Thay đổi cơ chế chuyển slide sang Pure CSS Radio Selector với display: none / display: block kết hợp animation slideFadeIn (0.35s). Các slide không còn nằm trong cùng flow đẩy chiều cao, loại bỏ vĩnh viễn khoảng trắng trống khi chuyển sang Slide 2 (LBWK S15) hoặc Slide 3 (Secret Chase).
+2. Khóa cứng tỉ lệ aspect-ratio: 1295 / 610 cho Hero Banner: Cố định chuẩn xác từng pixel của ảnh gốc, loại bỏ hiện tượng co giãn lệch trục.
+3. Căn chỉnh khớp tuyệt đối 100% 7 điểm Hotspot dấu cộng (+) trực tiếp lên từng xe:
+   - Scania 730S 10x4 Crane Bed: top 50.8%, left 45.6% (Cabin trung tâm).
+   - Toyota Alphard Sakura Pink: top 73.8%, left 32.4% (Nóc mui xe bên trái).
+   - Lamborghini Huracán Sterrato: top 82.3%, left 38.5% (Mui trần tím).
+   - Bugatti EB110 Super Sport: top 80.8%, left 50.5% (Nắp kính máy sau).
+   - Aston Martin AMR24 #14 Alonso F1: top 67.5%, left 59.1% (Cockpit F1 hàng trên).
+   - Aston Martin AMR24 #18 Stroll F1: top 73.4%, left 65.3% (Cockpit F1 hàng dưới).
+   - Team Lotus 79 #5 Classic F1: top 78.7%, left 71.8% (Cockpit F1 cổ điển màu đen vàng JPS).
+4. Bổ sung Modal chi tiết mới cho xe cổ điển Lotus #5 F1 (#modal-lotus5) mở bằng Pure CSS :target.
+5. Nâng cấp chuỗi hiệu ứng Pure CSS đặc sắc: Sóng radar 3 tầng phập phồng đa sắc (Đỏ - Đỏ cam - Vàng gold), xoay icon dấu cộng 135 độ thành dấu chéo × khi hover, hiệu ứng Popover nảy đàn hồi (spring bounce), hiệu ứng shimmer ánh kim lướt chéo qua các card sản phẩm, và chỉnh sửa logic đồng bộ số lượng xe trong bộ lọc 7 danh mục.
+-Nhận xét & Tinh chỉnh của SV:
+Tất cả các lỗi hiển thị được khắc phục triệt để. Tọa độ các dấu cộng ghim chuẩn xác 100% ngay trên thân từng chiếc xe, slide chuyển đổi nhanh và mượt mà 60fps không hề bị chớp hay tạo khoảng trống, trang web hoàn toàn không có một dòng mã JavaScript nào, cấu trúc logic và giao diện xuất sắc.
+
 3. Đánh giá cá nhân về quá trình Vibe Coding
 AI đã giúp bạn tiết kiệm thời gian ở phần nào nhất?
 -AI giúp tôi tiết kiệm nhiều thời gian trong việc xây dựng cấu trúc HTML, viết CSS, tạo layout bằng Flexbox/Grid và chỉnh sửa giao diện responsive. Ngoài ra, AI hỗ trợ tôi nhanh chóng tìm và sửa các lỗi trong quá trình thiết kế.
