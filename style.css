@@ -2236,8 +2236,8 @@ img {
 }
 /* Giữ nguyên class gốc của bạn, chỉ cần xóa thuộc tính "color" và "font-size" nếu không cần thiết nữa */
 .dev-avatar-img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   /* background & color có thể giữ lại làm fallback khi ảnh chưa tải xong */
   background: linear-gradient(135deg, #0f172a 0%, #334155 100%); 
